@@ -1,0 +1,84 @@
+
+ Python program to explain os.path.join() method
+
+ importing os module
+import os
+
+ Path
+path = "/home"
+
+ Join various path components
+print(os.path.join(path, "User/Desktop", "file.txt"))
+
+
+ Path
+path = "User/Documents"
+
+ Join various path components
+print(os.path.join(path, "/home", "file.txt"))
+
+ In above example '/home'
+ represents an absolute path
+ so all previous components i.e User / Documents
+ are thrown away and joining continues
+ from the absolute path component i.e / home.
+
+
+ Path
+path = "/User"
+
+ Join various path components
+print(os.path.join(path, "Downloads", "file.txt", "/home"))
+
+ In above example '/User' and '/home'
+ both represents an absolute path
+ but '/home' is the last value
+ so all previous components before '/home'
+ will be discarded and joining will
+ continue from '/home'
+
+ Path
+path = "/home"
+
+ Join various path components
+print(os.path.join(path, "User/Public/", "Documents", ""))
+
+ In above example the last
+ path component is empty
+ so a directory separator ('/')
+ will be put at the end
+ along with the concatenated value
+
+
+In [10]: table = soup.find("table")
+In [11]: table
+Out[11]: 
+<table border="0" class="box">
+<tbody><tr><th colspan="2">Current date info</th></tr>
+<tr><td>Today's date is:</td><td><b>Wednesday, April 15th, 2020</b></td></tr>
+<tr><td>Week of the year:</td><td><b>16 of 53</b></td></tr>
+<tr><td>Day of the year:</td><td><b>106 of 366</b></td></tr>
+</tbody></table>
+
+In [12]: table_content = table.find_all("td")        
+In [13]: for tag in table_content: 
+    ...:     print(tag.get_text())                  
+    ...:    
+
+    In [5]: response_json                                              
+Out[5]: 
+{'meta': {'name': 'openaq-api',
+  'license': 'CC BY 4.0',
+  'website': 'https://docs.openaq.org/',
+  'page': 1,
+  'limit': 100,
+  'found': 53396},
+ 'results': [{'location': 'Paris',
+   'parameter': 'pm25',
+   'date': {'utc': '2020-05-05T09:00:00.000Z',
+    'local': '2020-05-05T04:00:00+02:00'},
+   'value': 17.2,
+   'unit': 'µg/m³',
+ 'coordinates': {'latitude': 48.8386033565984,   'longitude': 2.41278502161662},
+   'country': 'FR',
+   'city': 'Paris'},
